@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
+use App\Models\Product;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,15 +19,15 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Mahpudin',
-            'email' => 'mahpudin@gmail.com',
+            'name' => 'Pudin',
+            'email' => 'pudin@app.com',
             'password' => Hash::make('12345678'),
         ]);
 
-        // //category factory 2
-        // Category::factory(2)->create();
+        //category factory 2
+        Category::factory(2)->create();
 
-        // //product factory 100
-        // Product::factory(100)->create();
+        //product factory 100
+        Product::factory(100)->create();
     }
 }
